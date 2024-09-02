@@ -6,6 +6,7 @@ sources:
     tables:
     - name: STG_CUSTOMERS
     - name: STG_PAYMENTS
+    - name: customers
     - name: STG_ORDERS
       columns:
         - name: id
