@@ -7,6 +7,7 @@ sources:
     - name: STG_CUSTOMERS
     - name: STG_PAYMENTS
     - name: customers
+    - name: stg_suppliers_data
     - name: STG_ORDERS
       columns:
         - name: id
@@ -22,3 +23,20 @@ sources:
     - name: STG_PRODUCT_DATA
     - name: emp
     
+  - name: datafeed_shared_schema_dev
+    database: "{{('di_sales')}}"
+    schema: dev
+    tables:
+    - name: RAW_CUSTOMER
+      columns:
+        - name: C_CUSTKEY
+          tests:
+            - unique
+            - not_null
+        - name: C_NAME
+          tests:
+            - not_null
+    - name: RAW_NATION
+    - name: RAW_LINEITEM
+    - name: RAW_ORDER
+ 
